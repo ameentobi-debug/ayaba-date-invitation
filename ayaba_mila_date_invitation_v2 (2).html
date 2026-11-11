@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#481b2b">
+<title>For Ayaba — a little invitation</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+:root{--wine:#501d2e;--wine2:#74364a;--cream:#fbf5ed;--paper:#fffdf9;--rose:#d9aeb0;--gold:#c6a16b;--ink:#35262b;--muted:#806e70}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden}
+body:before,body:after{content:"";position:fixed;z-index:-1;width:340px;height:340px;border:1px solid #dfc9b8;border-radius:50%;opacity:.45}
+body:before{top:-220px;left:-160px}body:after{right:-220px;bottom:-230px}
+main{min-height:100svh;display:grid;place-items:center;padding:22px 15px}
+.shell{width:min(100%,720px);min-height:590px;background:var(--paper);border:1px solid #ecdfd3;border-radius:28px;box-shadow:0 24px 90px #4d25300e;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.topline{display:flex;justify-content:space-between;align-items:center;padding:22px 28px;border-bottom:1px solid #f0e7df;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#a38b7e}
+.brand{color:var(--wine);font-weight:700}.step{font-variant-numeric:tabular-nums}
+.progress{height:2px;background:#f1e8e0}.progress span{display:block;height:100%;width:20%;background:var(--gold);transition:width .45s ease}
+.screen{display:none;flex:1;padding:clamp(30px,7vw,66px) clamp(24px,8vw,76px) 36px;text-align:center;align-items:center;justify-content:center;flex-direction:column;animation:rise .55s ease both}
+.screen.active{display:flex}@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.kicker{font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--gold)}
+h1,h2{font-family:'Playfair Display',Georgia,serif;font-weight:400;color:var(--wine);margin:14px 0}
+h1{font-size:clamp(43px,8vw,72px);line-height:1.02;letter-spacing:-.04em}h2{font-size:clamp(32px,6vw,48px);line-height:1.1}
+.italic{font-style:italic;color:var(--wine2)}
+p{font-size:15px;line-height:1.9;color:#6d5b60;max-width:490px;margin:10px auto}
+.ornament{font-size:30px;color:var(--rose);margin:8px 0}
+.line{width:52px;height:1px;background:var(--gold);margin:20px auto}
+.btn{border:0;border-radius:99px;padding:15px 24px;font:600 12px 'DM Sans',sans-serif;letter-spacing:.06em;cursor:pointer;transition:.2s;display:inline-flex;gap:10px;align-items:center;justify-content:center}
+.btn:hover{transform:translateY(-2px)}.primary{background:var(--wine);color:white;box-shadow:0 9px 24px #501d2e22}.secondary{background:#f5ece5;color:var(--wine)}
+.actions{display:flex;gap:11px;flex-wrap:wrap;justify-content:center;margin-top:26px}
+.envelope{width:104px;height:78px;margin:8px auto 20px;position:relative;background:#f3e5dc;border:1px solid #e5d0c2;border-radius:5px;display:grid;place-items:center;font-size:31px;box-shadow:0 10px 25px #4d25300c}
+.envelope:before{content:"";position:absolute;top:-1px;left:0;border-left:51px solid transparent;border-right:51px solid transparent;border-top:40px solid #e7d1c5}
+.note-card{background:#faf3ec;border:1px solid #eee0d4;border-radius:18px;padding:23px 25px;max-width:500px;margin:16px auto}
+.note-card p{font-family:'Playfair Display',serif;font-size:18px;line-height:1.7;color:#5d454c}
+.pills{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin:22px 0}
+.pill{border:1px solid #eadbd0;border-radius:99px;padding:9px 13px;color:#876e70;font-size:11px;letter-spacing:.04em}
+.photo-frame{width:min(100%,380px);height:175px;border-radius:17px;overflow:hidden;margin:18px auto;background:linear-gradient(120deg,#6b3546,#b77c7d 55%,#e6c9ae);position:relative;display:grid;place-items:center;color:#fff}
+.photo-frame:before,.photo-frame:after{content:"✦";position:absolute;color:#f6e4d1;font-size:22px;opacity:.8}.photo-frame:before{top:24px;left:35px}.photo-frame:after{bottom:24px;right:35px}
+.photo-frame span{font-family:'Playfair Display',serif;font-size:27px;font-style:italic}
+.restaurant{font-family:'Playfair Display',serif;font-size:30px;color:var(--wine);margin:10px 0 0}
+.small{font-size:11px;color:#a18d87;letter-spacing:.08em}
+.footer{padding:17px;text-align:center;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#b49d91}
+.confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:10}.heart{position:absolute;bottom:-30px;animation:float 4s linear forwards;color:#b65c72}@keyframes float{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}
+@media(max-width:480px){.shell{min-height:calc(100svh - 30px);border-radius:22px}.topline{padding:18px 19px}.screen{padding:35px 23px}.actions{width:100%}.actions .btn{width:100%}}
+</style>
+</head>
+<body>
+<main><div class="shell">
+  <div class="topline"><span class="brand">A LITTLE INVITATION</span><span class="step" id="step">01 / 05</span></div>
+  <div class="progress"><span id="bar"></span></div>
+
+  <section class="screen active" data-page="0">
+    <div class="kicker">Especially for you</div><div class="ornament">✿</div>
+    <h1>Hey, <span class="italic">Ayaba.</span></h1>
+    <p>I made a tiny corner of the internet just for you. Nothing complicated… just a little something from me to you.</p>
+    <div class="line"></div>
+    <p class="small">I hope this puts a smile on your face.</p>
+    <div class="actions"><button class="btn primary" onclick="next()">Let's see what you have for me <span>→</span></button></div>
+  </section>
+
+  <section class="screen" data-page="1">
+    <div class="kicker">A little note</div><div class="envelope">♡</div>
+    <h2>Before I ask…</h2>
+    <div class="note-card"><p>There's something lovely about making time for someone you enjoy. The conversations, the laughter, even the little moments in between. I'd like us to have more of those.</p></div>
+    <p>And yes, I may have planned a small surprise. 😊</p>
+    <div class="actions"><button class="btn secondary" onclick="back()">← Go back</button><button class="btn primary" onclick="next()">I'm listening <span>→</span></button></div>
+  </section>
+
+  <section class="screen" data-page="2">
+    <div class="kicker">A few things I'm hoping for</div><div class="ornament">♡</div>
+    <h2>An evening, just us.</h2>
+    <p>Good food. Unhurried conversation. A few silly jokes. Getting dressed up if we feel like it. And making a lovely memory together.</p>
+    <div class="pills"><span class="pill">GOOD FOOD</span><span class="pill">GREAT COMPANY</span><span class="pill">LOTS OF LAUGHTER</span></div>
+    <p class="small">No pressure, no big expectations. Just a thoughtful date.</p>
+    <div class="actions"><button class="btn secondary" onclick="back()">← Go back</button><button class="btn primary" onclick="next()">Where are we going? <span>→</span></button></div>
+  </section>
+
+  <section class="screen" data-page="3">
+    <div class="kicker">I have a place in mind</div>
+    <div class="photo-frame"><span>an evening at Mila</span></div>
+    <div class="restaurant">Mila</div>
+    <p>A table, something delicious, and time to enjoy each other's company. I'd love to take you there.</p>
+    <div class="line"></div><p class="small">We'll choose a day and time that works for both of us.</p>
+    <div class="actions"><button class="btn secondary" onclick="back()">← Go back</button><button class="btn primary" onclick="next()">Okay, ask me then… <span>→</span></button></div>
+  </section>
+
+  <section class="screen" data-page="4">
+    <div class="kicker">The question I've been saving</div><div class="ornament">✿</div>
+    <h2>Ayaba, would you let me take you on a date at <span class="italic">Mila?</span></h2>
+    <p>Just you and me. Good food, beautiful conversation, and a chance to make a sweet memory. ❤️</p>
+    <div class="actions" id="finalActions">
+      <button class="btn primary" onclick="answerYes()">Yes, I'd love to ❤️</button>
+      <button class="btn secondary" onclick="answerMaybe()">Let's talk about it 😊</button>
+    </div>
+    <div id="answer" style="display:none;margin-top:25px">
+      <div class="ornament">♥</div><h2 id="answerTitle">You just made me smile.</h2>
+      <p id="answerText">It's a date, then. I'll sort out the details and we can pick a day that works for you. ❤️</p>
+      <p class="small" id="emailStatus"></p>
+    </div>
+    <div class="actions"><button class="btn secondary" id="backFinal" onclick="back()">← Read that again</button></div>
+  </section>
+  <div class="footer">Made with care · one little question</div>
+</div></main>
+<div class="confetti" id="confetti"></div>
+<script>
+let current=0;
+const pages=[...document.querySelectorAll('.screen')];
+function render(){pages.forEach((p,i)=>p.classList.toggle('active',i===current));document.getElementById('step').textContent=String(current+1).padStart(2,'0')+' / 05';document.getElementById('bar').style.width=((current+1)*20)+'%';}
+function next(){if(current<4){current++;render()}}
+function back(){if(current>0){current--;render()}}
+function hearts(){const layer=document.getElementById('confetti');for(let i=0;i<18;i++){const h=document.createElement('span');h.className='heart';h.textContent=['♥','♡','✦'][i%3];h.style.left=Math.random()*100+'%';h.style.animationDelay=(Math.random()*1.6)+'s';h.style.fontSize=(12+Math.random()*18)+'px';layer.appendChild(h);setTimeout(()=>h.remove(),5000)}}
+function answerYes(){document.getElementById('finalActions').style.display='none';document.getElementById('backFinal').style.display='none';document.getElementById('answer').style.display='block';document.getElementById('answerTitle').textContent='You just made me smile.';document.getElementById('answerText').innerHTML="It's a date, then. ❤️<br>I'll sort out the details and we can pick a day that works for you.";document.getElementById('emailStatus').textContent='';hearts();}
+// The email notification will be connected after the recipient address and email-delivery setup are confirmed.
+function answerMaybe(){document.getElementById('finalActions').style.display='none';document.getElementById('backFinal').style.display='none';document.getElementById('answer').style.display='block';document.getElementById('answerTitle').textContent='Of course, Ayaba. 😊';document.getElementById('answerText').textContent="No pressure at all. I'd still love to plan something whenever you're comfortable.";document.getElementById('emailStatus').textContent=''}
+</script>
+</body></html>
